@@ -33,9 +33,9 @@ namespace WindowsFormsApp2
 
         int hordir = 0;
         int verdir = 0;
-        bool jumpf=true;
+        bool jumpf = true;
         int speed = 5;
-        int maxjump =200;
+        int maxjump = 200;
         private void keydown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -58,7 +58,7 @@ namespace WindowsFormsApp2
         {
             for (int i = 0; i < blocks.Count; i++)
             {
-                if (player.Top >= blocks[i].Bottom )
+                if (player.Top >= blocks[i].Bottom)
                     maxjump = blocks[i].Bottom;
             }
             if (verdir == -2)
@@ -82,7 +82,7 @@ namespace WindowsFormsApp2
         {
             bg.Left += speed * hordir;
             for (int i = 0; i < blocks.Count; i++)
-                    blocks[i].Left+= speed * hordir;
+                blocks[i].Left += speed * hordir;
 
             if (bg.Left <= 0)
                 bg.Width += bg.Width;
